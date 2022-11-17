@@ -1,0 +1,61 @@
+@import "styles/main.scss";
+
+.container {
+	position: relative;
+	width: 1000px;
+	align-items: center;
+	justify-content: center;
+	margin: 5px auto;
+	justify-items: center;
+	outline: none;
+}
+
+.header {
+	text-align: center;
+}
+
+.gameContainer {
+	border: solid 1px black;
+}
+
+.scoreOuterContainer {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+}
+
+.scoreContainer {
+	display: inline-flex;
+	width: 100%;
+	height: 70px;
+	align-items: center;
+	// border: 1px solid blue;
+	justify-content: center;
+	background-color: #dcdcdc;
+	// font-size: 40px;
+}
+
+.scoreText {
+	font-weight: 600;
+}
+
+.canvas {
+	width: 1000px;
+	height: 700px;
+	outline: none;
+}
+
+.startScreen {
+	position: absolute;
+	top: 500px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	text-align: center;
+
+	&Sub {
+		@extend .startScreen;
+
+		top: 550px;
+	}
+}

@@ -1,0 +1,147 @@
+@import "styles/main.scss";
+
+.container {
+	position: relative;
+	width: 1000px;
+	align-items: center;
+	justify-content: center;
+	margin: 5px auto;
+	justify-items: center;
+	outline: none;
+}
+
+.header {
+	text-align: center;
+}
+
+.gameContainer {
+	position: relative;
+	border: solid 1px black;
+}
+
+.scoreOuterContainer {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+}
+
+.scoreContainer {
+	display: inline-flex;
+	width: 100%;
+	height: 70px;
+	align-items: center;
+	justify-content: center;
+	background-color: #dcdcdc;
+}
+
+.scoreText {
+	font-weight: 600;
+}
+
+.canvas {
+	width: 1000px;
+	height: 700px;
+	outline: none;
+}
+
+.startScreen {
+	position: absolute;
+	top: 500px;
+	right: 0;
+	left: 0;
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+
+	&Sub {
+		@extend .startScreen;
+
+		top: 550px;
+	}
+
+	&Single {
+		@extend .startScreen;
+
+		height: 50px;
+		border: solid 1px black;
+		background-color: #dcdcdc;
+		cursor: pointer;
+	}
+
+	&Multi {
+		@extend .startScreen;
+
+		top: 600px;
+		height: 50px;
+		border: solid 1px black;
+		background-color: #dcdcdc;
+		cursor: pointer;
+	}
+}
+
+.countdown {
+	position: absolute;
+	top: 250px;
+	right: 0;
+	left: 0;
+	width: 320px;
+	background-color: #dcdcdc;
+	font-size: 40px;
+	margin-inline: auto;
+	text-align: center;
+}
+
+.letter {
+	font-size: 40px;
+}
+
+.scoreboard {
+	position: absolute;
+	top: 250px;
+	right: 0;
+	left: 0;
+	width: 350px;
+	background-color: #dcdcdc;
+	margin-inline: auto;
+	text-align: center;
+}
+
+.scoreboardHeader {
+	grid-area: 1/1/2/3;
+}
+
+.scoreboardRow {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px;
+}
+
+.playerName {
+	text-align: left;
+}
+
+.playerScore {
+	text-align: right;
+}
+
+.readyup {
+	display: flex;
+	width: 300px;
+	flex-direction: column;
+	border: solid 1px black;
+	margin: 0 auto;
+	cursor: pointer;
+	text-align: center;
+
+	&-yes {
+		@extend .readyup;
+
+		background-color: greenyellow;
+	}
+
+	&-no {
+		@extend .readyup;
+
+		background-color: #dcdcdc;
+	}
+}
