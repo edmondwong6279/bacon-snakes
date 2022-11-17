@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable react-hooks/exhaustive-deps */
 import styles from './SnakeComponent.module.scss';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, KeyboardEvent } from 'react';
 import Snake from './Snake';
 
 const SnakeComponent = ({}) => {
@@ -32,7 +32,8 @@ const SnakeComponent = ({}) => {
 	const [gridWidth, setGridWidth] = useState(width / maxWidth);
 	const [gridHeight, setGridHeight] = useState(height / maxHeight);
 
-	const keyListener = (e: KeyboardEvent) => {
+	// KeyboardEventHandler<HTMLDivElement>
+	const keyListener = (e: KeyboardEvent<HTMLDivElement>) => {
 		const { key } = e;
 		e.preventDefault();
 		e.stopPropagation();
@@ -225,7 +226,6 @@ const SnakeComponent = ({}) => {
 
 	return (
 		<div className={styles.container} onKeyDown={keyListener} tabIndex={0}>
-			{/* <div className={styles.container} tabIndex={0}> */}
 			<h1 className={styles.header}>B A C O N S N A K E</h1>
 			<div className={styles.gameContainer}>
 				<div className={styles.scoreOuterContainer}>
